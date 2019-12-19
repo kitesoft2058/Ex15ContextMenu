@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
 
+        //OptionMenu와 만드는 방법은 동일함.
+        //res폴더>>menu폴더>>context.xml 파일을 만들어서 메뉴항목들 작성
         //context.xml파일을 메뉴객체로 생성(부플리다..)
         MenuInflater inflater= getMenuInflater();
         inflater.inflate(R.menu.context, menu);
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
 
-
+        //context.xml파일에 작성한 메뉴항목들의 id를 식별하여 토스트 보여주기
         switch ( item.getItemId() ){
             case R.id.menu_save:
                 Toast.makeText(this, "SAVED", Toast.LENGTH_SHORT).show();
